@@ -3,6 +3,7 @@ import BannerProps from "./BannerProps";
 import styles from "./Banner.module.scss";
 import Image from "next/image";
 import Parallax from "components/Parallax/Parallax";
+import { BiReceipt, BiTimer } from "react-icons/bi";
 
 const Banner: FunctionComponent<BannerProps> = () => {
   return (
@@ -17,6 +18,14 @@ const Banner: FunctionComponent<BannerProps> = () => {
           Reprehenderit at libero animi, quis hic delectus aut illo, aspernatur
           nisi obcaecati amet nam adipisci.
         </p>
+        <div className={styles.cta}>
+          <button className={styles.buttonPrimary}>
+            <BiTimer className={styles.orderIcon} /> Order now
+          </button>
+          <button className={styles.buttonSecondary}>
+            <BiReceipt className={styles.orderIcon} /> Browse Menu
+          </button>
+        </div>
       </div>
       <div className={styles.contentRight}>
         <div className={styles.imageRightWrapper}>
@@ -24,6 +33,14 @@ const Banner: FunctionComponent<BannerProps> = () => {
             <Image src="/images/soup.png" alt="Food" width={600} height={574} />
           </Parallax>
         </div>
+        <Image src="/images/pepper.png" alt="Tomato" width={600} height={574} />
+        <Image
+          src="/images/leaf.png"
+          alt="Greens"
+          width={180}
+          height={176}
+          className={styles.leaf}
+        />
         <div className={styles.countertop} />
       </div>
     </section>

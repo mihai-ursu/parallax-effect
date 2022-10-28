@@ -5,13 +5,61 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   position: relative;
 }
 
 .textLeft {
   flex-basis: 40%;
   margin-left: 8rem;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.buttonPrimary {
+  background: $color-orange;
+  color: white;
+  padding: 1.2rem 1.4rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 300ms ease-in-out;
+
+  &:hover {
+    background: $color-orange-light;
+  }
+}
+
+.orderIcon {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.buttonSecondary {
+  background: $color-lighter-gray;
+  color: $color-dark-gray;
+  padding: 1.2rem 1.4rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 300ms ease-in-out;
+
+  &:hover {
+    background: $color-light-gray;
+  }
 }
 
 .title {
@@ -24,6 +72,7 @@
 .titleTop {
   color: $color-orange;
 }
+
 .titleBottom {
   font-weight: 400;
 }
@@ -47,18 +96,27 @@
   position: absolute;
   top: 9rem;
   left: 5rem;
+  z-index: 1;
 }
 
 .countertop {
-  height: 110vh;
-  width: 110vh;
+  height: 115vh;
+  width: 115vh;
   position: absolute;
-  background-image: url(/images/countertop.jpg);
-  right: -36vh;
+  background-image: url(/images/countertop2.jpg);
+  left: 14vw;
+  bottom: 0;
   border-radius: 50%;
   z-index: -1;
 }
 
 .bannerImage {
   object-fit: cover;
+}
+
+.leaf {
+  position: absolute;
+  right: 1vw;
+  bottom: 8rem;
+  z-index: 0;
 }
