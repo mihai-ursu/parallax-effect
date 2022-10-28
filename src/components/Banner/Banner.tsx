@@ -1,11 +1,9 @@
-import { FunctionComponent } from "react";
-import BannerProps from "./BannerProps";
 import styles from "./Banner.module.scss";
 import Image from "next/image";
 import Parallax from "components/Parallax/Parallax";
 import { BiReceipt, BiTimer } from "react-icons/bi";
 
-const Banner: FunctionComponent<BannerProps> = () => {
+const Banner = () => {
   return (
     <section className={styles.wrapper}>
       <div className={styles.textLeft}>
