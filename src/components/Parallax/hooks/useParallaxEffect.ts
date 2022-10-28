@@ -18,12 +18,11 @@ const useParallaxEffect = (ref: RefObject<HTMLElement>, offset: number) => {
   useIsomorphicLayoutEffect(() => {
     const element = ref.current;
     const onResize = () => {
-      if (element) {
-        setElementTop(
-          element.getBoundingClientRect().top + window.scrollY || window.scrollY
-        );
-        setElementHeight(element.offsetHeight);
-      }
+      if (!element) return;
+      setElementTop(
+        element.getBoundingClientRect().top + window.scrollY || window.scrollY
+      );
+      setElementHeight(element.offsetHeight);
       setClientHeight(window.innerHeight);
     };
     onResize();
