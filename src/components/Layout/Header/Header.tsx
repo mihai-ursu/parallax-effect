@@ -8,7 +8,13 @@ const Header = () => {
   return (
     <header className={styles.wrapper}>
       <Link href="/">
-        <Image src={Logo} alt="FoodGo" width={200} height={50} />
+        <Image
+          src={Logo}
+          alt="FoodGo"
+          width={200}
+          height={50}
+          loading="eager"
+        />
       </Link>
 
       <nav className={styles.navigation}>

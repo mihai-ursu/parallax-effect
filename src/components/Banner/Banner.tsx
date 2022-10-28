@@ -39,7 +39,7 @@ const Banner = () => {
         </div>
         <Image
           src="/images/tomato-1.png"
-          alt="Pepper"
+          alt="Tomato"
           width={90}
           height={93}
           className={styles.tomatoOne}
@@ -47,7 +47,7 @@ const Banner = () => {
         />
         <Image
           src="/images/tomato-2.png"
-          alt="Pepper"
+          alt="Tomato"
           width={90}
           height={93}
           className={styles.tomatoTwo}
