@@ -30,16 +30,38 @@ const Banner: FunctionComponent<BannerProps> = () => {
       <div className={styles.contentRight}>
         <div className={styles.imageRightWrapper}>
           <Parallax isEffectActive={true} offset={100}>
-            <Image src="/images/soup.png" alt="Food" width={600} height={574} />
+            <Image
+              src="/images/soup.png"
+              alt="Food"
+              width={600}
+              height={574}
+              loading="eager"
+            />
           </Parallax>
         </div>
-        <Image src="/images/pepper.png" alt="Tomato" width={600} height={574} />
+        <Image
+          src="/images/tomato-1.png"
+          alt="Pepper"
+          width={90}
+          height={93}
+          className={styles.tomatoOne}
+          loading="eager"
+        />
+        <Image
+          src="/images/tomato-2.png"
+          alt="Pepper"
+          width={90}
+          height={93}
+          className={styles.tomatoTwo}
+          loading="eager"
+        />
         <Image
           src="/images/leaf.png"
-          alt="Greens"
-          width={180}
-          height={176}
+          alt="Green Leaf"
+          width={100}
+          height={102}
           className={styles.leaf}
+          loading="eager"
         />
         <div className={styles.countertop} />
       </div>

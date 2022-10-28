@@ -116,7 +116,21 @@
 
 .leaf {
   position: absolute;
-  right: 1vw;
-  bottom: 8rem;
+  right: 8rem;
+  bottom: 14rem;
+  z-index: 0;
+}
+
+.tomatoOne {
+  position: absolute;
+  right: 7rem;
+  top: 16rem;
+  z-index: 0;
+}
+
+.tomatoTwo {
+  position: absolute;
+  right: 9rem;
+  top: 21rem;
   z-index: 0;
 }
