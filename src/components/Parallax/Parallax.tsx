@@ -17,7 +17,7 @@ const Parallax: FunctionComponent<ParallaxProps> = (props) => {
   }
 
   return (
-    <motion.div className={styles.parallax_wrapper} ref={ref} style={{ y }}>
+    <motion.div className={styles.parallax_wrapper} ref={ref} style={{ y: y }}>
       {children}
     </motion.div>
   );

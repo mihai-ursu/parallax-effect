@@ -1,0 +1,56 @@
+@use "../../styles/colors" as *;
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.textLeft {
+  flex-basis: 40%;
+  margin-left: 8rem;
+}
+
+.title {
+  font-size: 3.8rem;
+  line-height: 6rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.titleTop {
+  color: $color-orange;
+}
+.titleBottom {
+  font-weight: 400;
+}
+
+.text {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.imageRight {
+  position: relative;
+  width: 42rem;
+  height: 100vh;
+}
+
+.countertop {
+  height: 110vh;
+  width: 110vh;
+  position: absolute;
+  background-image: url(/images/countertop.jpg);
+  right: -40vh;
+  top: -10vh;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.bannerImage {
+  object-fit: cover;
+}

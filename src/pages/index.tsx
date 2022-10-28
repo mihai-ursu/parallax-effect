@@ -1,6 +1,4 @@
 import Banner from "components/Banner/Banner";
-import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -8,6 +6,7 @@ export default function Home() {
     <div className={styles.container}>
       <main>
         <Banner />
+        <div className={styles.space} />
       </main>
     </div>
   );
