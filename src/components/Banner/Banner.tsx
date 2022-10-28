@@ -2,6 +2,7 @@ import { FunctionComponent } from "react";
 import BannerProps from "./BannerProps";
 import styles from "./Banner.module.scss";
 import Image from "next/image";
+import Parallax from "components/Parallax/Parallax";
 
 const Banner: FunctionComponent<BannerProps> = () => {
   return (
@@ -14,13 +15,16 @@ const Banner: FunctionComponent<BannerProps> = () => {
         <p className={styles.text}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
           Reprehenderit at libero animi, quis hic delectus aut illo, aspernatur
-          nisi obcaecati amet nam adipisci, harum fuga id aperiam earum
-          molestias. Odit? At, placeat deleniti? Cumque, tenetur.
+          nisi obcaecati amet nam adipisci.
         </p>
       </div>
-      {/* <div className={styles.imageRight}></div> */}
-      <div className={styles.countertop}>
-        {/* <img src="/images/seamless-countertop.jpg" alt="Countertop" /> */}
+      <div className={styles.contentRight}>
+        <div className={styles.imageRightWrapper}>
+          <Parallax isEffectActive={true} offset={100}>
+            <Image src="/images/soup.png" alt="Food" width={600} height={574} />
+          </Parallax>
+        </div>
+        <div className={styles.countertop} />
       </div>
     </section>
   );

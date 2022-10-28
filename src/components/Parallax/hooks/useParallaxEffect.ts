@@ -4,12 +4,13 @@ import { RefObject, useState } from "react";
 
 const useParallaxEffect = (ref: RefObject<HTMLElement>, offset: number) => {
   const [elementTop, setElementTop] = useState(0);
+  const [elementHeight, setElementHeight] = useState(0);
   const [clientHeight, setClientHeight] = useState(0);
 
   const { scrollY } = useScroll();
 
   const initial = Math.max(elementTop - clientHeight, 0);
-  const final = elementTop + offset;
+  const final = elementTop + elementHeight;
 
   const yRange = useTransform(scrollY, [initial, final], [offset, -offset]);
   const y = useSpring(yRange, { stiffness: 400, damping: 90 });
@@ -17,10 +18,12 @@ const useParallaxEffect = (ref: RefObject<HTMLElement>, offset: number) => {
   useIsomorphicLayoutEffect(() => {
     const element = ref.current;
     const onResize = () => {
-      if (element)
+      if (element) {
         setElementTop(
           element.getBoundingClientRect().top + window.scrollY || window.scrollY
         );
+        setElementHeight(element.offsetHeight);
+      }
       setClientHeight(window.innerHeight);
     };
     onResize();

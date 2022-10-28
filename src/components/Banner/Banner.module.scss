@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
+
   position: relative;
 }
 
@@ -34,10 +34,19 @@
   margin-bottom: 2rem;
 }
 
-.imageRight {
+.contentRight {
+  width: 50vw;
+  height: 110vh;
   position: relative;
-  width: 42rem;
-  height: 100vh;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.imageRightWrapper {
+  position: absolute;
+  top: 9rem;
+  left: 5rem;
 }
 
 .countertop {
@@ -45,8 +54,7 @@
   width: 110vh;
   position: absolute;
   background-image: url(/images/countertop.jpg);
-  right: -40vh;
-  top: -10vh;
+  right: -36vh;
   border-radius: 50%;
   z-index: -1;
 }
